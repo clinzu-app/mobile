@@ -1,19 +1,19 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Navbar from '../others/Navbar';
-import DashboardScreen from '../../Screens/DashboardScreen';
-import LoginScreen from '../../Screens/LoginScreen';
-import MapScreen from '../../Screens/Map copy';
+import Navbar from '../components/Common/Navbar';
+import HomeScreen from '../screens/Home';
+import LoginScreen from '../screens/Login';
+import MapScreen from '../screens/Map copy';
 
 const Stack = createNativeStackNavigator();
 
-const MainStack = () => {
+export default function HomeStack() {
     return (
         <>
-            <Stack.Navigator initialRouteName="Dashboard">
+            <Stack.Navigator initialRouteName="Home">
                 <Stack.Screen
-                    name="Dashboard"
-                    component={DashboardScreen}
+                    name="Home"
+                    component={HomeScreen}
                     options={{ headerShown: false }}
                 />
                 <Stack.Screen
@@ -27,9 +27,7 @@ const MainStack = () => {
                     options={{ headerShown: false }}
                 />
             </Stack.Navigator>
-            <Navbar />
+            {/* <Navbar /> */}
         </>
-    )
-}
-
-export default MainStack
+    );
+};
