@@ -34,34 +34,34 @@ const sizes: any = {
 const defaultValues: any = {};
 
 const percentageValues: any = {
-    'xs': '2%',
-    'sm': '5%',
-    'md': '8%',
+    // 'xs': '2%',
+    // 'sm': '5%',
+    // 'md': '8%',
     'lg': '10%',
-    '1/5': '20%',
-    '1/4': '25%',
-    '1/3': '33.33%',
-    '1/2': '50%',
-    '3/4': '75%',
-    '4/5': '80%',
-    'xl': '90%',
-    '2xl': '95%',
-    'full': '100%',
+    // '1/5': '20%',
+    // '1/4': '25%',
+    // '1/3': '33.33%',
+    // '1/2': '50%',
+    // '3/4': '75%',
+    // '4/5': '80%',
+    // 'xl': '90%',
+    // '2xl': '95%',
+    // 'full': '100%',
 };
 
 const remFactor = 1;
 const rem = (width / 411.43) * remFactor;
 
 for (let i = 0; i <= 100; i++) {
-    defaultValues[i] = i * rem;
-    defaultValues[`${i}%`] = `${i}%`;
-    defaultValues[`${i}w`] = i * width / 100;
-    defaultValues[`${i}h`] = i * width / 100;
+    // defaultValues[i] = i * rem;
+    // defaultValues[`${i}%`] = `${i}%`;
+    // defaultValues[`${i}w`] = i * width / 100;
+    // defaultValues[`${i}h`] = i * height / 100;
 }
 
 const values: any = {
-    'vw': width,
-    'vh': height,
+    // 'vw': width,
+    // 'vh': height,
     ...defaultValues,
     ...percentageValues,
 };
@@ -130,5 +130,5 @@ function generateClass(property: any, value: any) {
 export {
     width,
     height,
-    sizes,
+    sizes
 };

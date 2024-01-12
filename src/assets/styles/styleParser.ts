@@ -16,6 +16,9 @@ export default function parseStyles(className: string) {
 }
 
 function getResponsiveClass(className: string) {
+    if (className === 'undefined') {
+        return null;
+    }
     if (className.includes(':')) {
         const [breakPoint, responsiveClass] = className.split(':');
         return width < parseInt(breakPoint) ? responsiveClass : null;
@@ -25,6 +28,9 @@ function getResponsiveClass(className: string) {
 
 function getStyleValue(className: string) {
     const styleValue = styles[className.replace(/-/g, '_')];
-    if (styleValue === undefined) { console.log(`Parse styles: "${className}" is undefined`) }
+    if (styleValue === undefined) {
+        // try to create the className
+        console.log(`Parse styles: "${className}" is undefined`)
+    }
     return styleValue;
 }

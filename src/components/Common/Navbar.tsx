@@ -39,8 +39,8 @@ export default function Navbar() {
     ));
 
     return (
-        <View className='w-full absolute bottom-0 left-0 px-2w mb-2w bg-red-400 bg-green-300'>
-            <View className='flex-row justify-around gap-8 p-14 bg-gray-400'>
+        <View className='w-full absolute bottom-0 left-0 px-2w mb-2w'>
+            <View className='flex-row justify-around gap-8 p-14 bg-gray-900'>
                 {navbarItems}
             </View>
         </View>

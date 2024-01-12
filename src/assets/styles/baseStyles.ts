@@ -1,4 +1,4 @@
-const layout = {
+const baseStyles = {
 
     // Display
     flex: {
@@ -8,6 +8,7 @@ const layout = {
         display: 'none',
     },
 
+    // flex_1 need a function
     flex_1: {
         flex: 1,
     },
@@ -19,8 +20,6 @@ const layout = {
     relative: {
         position: 'relative',
     },
-
-
 
     // Flex Direction
     flex_row: {
@@ -160,24 +159,46 @@ const layout = {
     },
 
     // z-Index (need function)
-    z_0: {
-        zIndex: 0,
+
+
+    // colors default
+
+    bg_black: {
+        backgroundColor: "#000000"
     },
-    z_10: {
-        zIndex: 10,
+    bg_transparent: {
+        backgroundColor: "transparent"
     },
-    z_20: {
-        zIndex: 20,
+    bg_white: {
+        backgroundColor: "#ffffff"
     },
-    z_30: {
-        zIndex: 30,
+    border_black: {
+        borderColor: "#000000"
     },
-    z_40: {
-        zIndex: 40,
+    border_transparent: {
+        borderColor: "transparent"
     },
-    z_50: {
-        zIndex: 50,
+    border_white: {
+        borderColor: "#ffffff"
     },
+    shadow_black: {
+        shadowColor: "#000000"
+    },
+    shadow_transparent: {
+        shadowColor: "transparent"
+    },
+    shadow_white: {
+        shadowColor: "#ffffff"
+    },
+    text_black: {
+        color: "#000000"
+    },
+    text_transparent: {
+        color: "transparent"
+    },
+    text_white: {
+        color: "#ffffff"
+    }
 };
 
-export { layout };
+export { baseStyles };

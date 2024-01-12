@@ -1,13 +1,16 @@
 import { StyleSheet } from 'react-native';
-import { layout } from './layout';
+import { baseStyles } from './baseStyles';
 import { sizes } from './sizes';
-import { colors } from './colors';
+import { colorStyles } from './colorStyles';
 
 const styles = StyleSheet.create({
-    ...layout,
-    ...sizes,
-    ...colors,
+    ...baseStyles,
+    ...colorStyles,
 });
 
 // console.log(styles)
+const sizeInBytes = new Blob([JSON.stringify(styles)]).size;
+const sizeInMegabytes = sizeInBytes / 1024 / 1024;
+console.log(`Size of styles object: ${sizeInMegabytes} MB`);
+console.log(styles)
 export { styles };
