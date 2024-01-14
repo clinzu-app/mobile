@@ -1,4 +1,5 @@
-import { width } from "./sizes";
+import { styleGenerator } from "./styleGenerator";
+import { width } from "./dimensions";
 import { styles } from "./styleSheet";
 
 export default function parseStyles(className: string) {
@@ -20,6 +21,7 @@ function getResponsiveClass(className: string) {
         return null;
     }
     if (className.includes(':')) {
+        // console.log('Responsive works: ' + width)
         const [breakPoint, responsiveClass] = className.split(':');
         return width < parseInt(breakPoint) ? responsiveClass : null;
     }
@@ -27,10 +29,6 @@ function getResponsiveClass(className: string) {
 }
 
 function getStyleValue(className: string) {
-    const styleValue = styles[className.replace(/-/g, '_')];
-    if (styleValue === undefined) {
-        // try to create the className
-        console.log(`Parse styles: "${className}" is undefined`)
-    }
-    return styleValue;
+    // console.log(styles[styleGenerator(className).replace(/-/g, '_')])
+    return styles[styleGenerator(className).replace(/-/g, '_')];
 }

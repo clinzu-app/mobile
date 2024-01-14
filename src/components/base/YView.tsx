@@ -6,7 +6,6 @@ export default function YView({ children, ...props }: any) {
         <ScrollView
             bounces={false}
             showsVerticalScrollIndicator={false}
-            className='flex-1'
             {...props}
         >
             {children}

@@ -13,7 +13,7 @@ function styleInjector(Component: any) {
     return ({ style, className, children, ...props }: any) => {
         const styles = className ? StyleParser(className) : {};
         return (
-            <Component style={[style, styles]} {...props}>
+            <Component style={[styles, style]} {...props}>
                 {children}
             </Component>
         );

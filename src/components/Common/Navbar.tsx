@@ -13,7 +13,7 @@ export default function Navbar() {
     function Navitem({ label, onPress, selected }: any) {
         return (
             <Pressable onPress={onPress}>
-                <View className={`aspect-square w-35 ${selected ? 'bg-gray-800' : 'bg-gray-500'}`}>
+                <View className={`aspect-square w-35 ${selected ? 'bg-slate-800' : 'bg-slate-500'}`}>
                     {label}
                 </View>
             </Pressable>
