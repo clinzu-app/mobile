@@ -20,8 +20,11 @@ function styleGenerator(className: string) {
             return null;
         }
 
-        // const [name, value] = className.split('-');
+        // console.log(name)
+
         const property = sizesAbbr[name];
+
+
         if (property) {
             const generatedStyle: any = {};
             // Part 1: Sizing
@@ -34,15 +37,24 @@ function styleGenerator(className: string) {
             } else if (className.endsWith('h')) {
                 generatedStyle[property] = (parseInt(value) * height) / 100;
             } else {
-                generatedStyle[property] = parseInt(value) * rem;
+                if (name === 'flex') {
+                    generatedStyle[property] = parseInt(value);
+                } else {
+                    generatedStyle[property] = parseInt(value) * rem;
+                }
+
             }
             styles[`${name}_${value}`] = generatedStyle;
-            // console.log(`${name}_${value}`)
-            // console.log(generatedStyle)
-            // console.log('####')
-            // console.log('####')
-            // console.log('####')
-            // console.log(styles[`${name}_${value}`] = generatedStyle)
+
+            if (name === 'roundeddd') {
+                console.log(`${name}_${value}`)
+                console.log(generatedStyle)
+                console.log('####')
+                console.log('####')
+                console.log('####')
+                console.log(styles[`${name}_${value}`] = generatedStyle)
+            }
+
         } else {
             console.log(`Class '${className}' not generated. Check sizesAbbr array.`);
         }

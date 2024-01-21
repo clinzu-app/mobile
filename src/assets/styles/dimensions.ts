@@ -4,8 +4,8 @@ import { Dimensions } from "react-native";
 
 const { width, height } = Dimensions.get('window');
 const scaleFactor = 1;
-// const rem = (width / 1440) * scaleFactor;
-const rem = 1;
+const rem = (width / 1920) * scaleFactor;
+// const rem = 1;
 console.log('Device width: ' + width)
 export {
     width,

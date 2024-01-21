@@ -7,7 +7,6 @@ export default function XView({ children, ...props }: any) {
             horizontal
             bounces={false}
             showsHorizontalScrollIndicator={false}
-            contentContainerStyle={{ gap: 8, paddingHorizontal: '3%' }}
             {...props}
         >
             {children}

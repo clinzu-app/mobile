@@ -4,7 +4,7 @@ import Navbar from '../components/Common/Navbar';
 import HomeScreen from '../screens/Home';
 import LoginScreen from '../screens/Login';
 import MapScreen from '../screens/Map copy';
-import TestScreen from '../screens/Test';
+import TestScreen from '../screens/BZZR/Test';
 
 const Stack = createNativeStackNavigator();
 

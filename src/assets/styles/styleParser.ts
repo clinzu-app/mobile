@@ -30,5 +30,5 @@ function getResponsiveClass(className: string) {
 
 function getStyleValue(className: string) {
     // console.log(styles[styleGenerator(className).replace(/-/g, '_')])
-    return styles[styleGenerator(className).replace(/-/g, '_')];
+    return styles[styleGenerator(className)!.replace(/-/g, '_')];
 }
